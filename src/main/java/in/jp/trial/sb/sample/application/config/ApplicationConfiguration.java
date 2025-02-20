@@ -17,24 +17,6 @@ public class ApplicationConfiguration {
     @Autowired
     DatasourceConfig datasourceConfig;
 
-//    @Bean(name="dataSource")
-//    DataSource createDataSource() {
-//        HikariConfig config = new HikariConfig();
-////        System.out.println(datasourceConfig.getUrl());
-////        System.out.println(datasourceConfig.getUsername());
-////        System.out.println(datasourceConfig.getPassword());
-////        System.out.println(datasourceConfig.getDriverClassName());
-//        config.setUsername(datasourceConfig.getUsername());
-//        config.setPassword(datasourceConfig.getPassword());
-//        config.setDriverClassName(datasourceConfig.getDriverClassName());
-//        config.setJdbcUrl(datasourceConfig.getUrl());
-////        config.setDriverClassName(datasourceConfig.getDriverClassName());
-//        config.setAutoCommit(true);
-//        DataSource dataSource = new HikariDataSource(config);
-//
-//        return dataSource;
-//    }
-
     @Bean(name="dataSource")
     DataSource createDataSource() {
         HikariConfig config = new HikariConfig();
@@ -43,11 +25,7 @@ public class ApplicationConfiguration {
         config.setDriverClassName(datasourceConfig.getDriverClassName());
         config.setJdbcUrl(datasourceConfig.getUrl());
         config.setAutoCommit(true);
-//        EmbeddedDatabase dataSource = new EmbeddedDatabaseBuilder()
-//                .setType(EmbeddedDatabaseType.H2)
-//                .build();
         DataSource dataSource = new HikariDataSource(config);
-
         return dataSource;
     }
 

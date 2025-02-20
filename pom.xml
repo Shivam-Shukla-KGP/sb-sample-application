@@ -48,6 +48,12 @@
             <scope>runtime</scope>
         </dependency>
 
+<!--        Test Dependencies go here-->
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-test</artifactId>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
